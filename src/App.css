@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.countdown__day,
+.countdown__hour,
+.countdown__minute,
+.countdown__second {
+	text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+	font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+	font-size: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.xmas-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100vh;
+	width: 100%;
+	padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+
+.video-container video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.countdown {
+	position: relative;
+	margin-top: 100px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+
+.countdown__title h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.8rem;
+	margin-bottom: 50px;
+}
+
+.countdown__body {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 280px) {
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 0.8rem;
+	}
+	.countdown__title {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (min-width: 620px) {
+	h2 {
+		font-size: 3rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	.countdown__title h1 {
+		font-size: 3.2rem;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	.countdown__title h1 {
+		font-size: 5rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	.countdown__title h1 {
+		font-size: 5rem;
+	}
 }
