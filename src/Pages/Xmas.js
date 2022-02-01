@@ -19,7 +19,6 @@ const Xmas = () => {
 	}
 
 	setInterval(updateCountDownTime, 1000);
-
 	return (
 		<div className="xmas-container">
 			<div className="video-container">
