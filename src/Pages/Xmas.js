@@ -6,11 +6,15 @@ const Xmas = () => {
 	const [minute, setMinute] = useState(0);
 	const [second, setSecond] = useState(0);
 
-	const currentYear = new Date().getFullYear();
-	const christmas = new Date(`December 25 ${currentYear} 00:00:00`);
-
 	function updateCountDownTime() {
 		const currentTime = new Date();
+		const currentYear = new Date().getFullYear();
+		let christmas = new Date(`December 25 ${currentYear} 00:00:00`);
+
+		if (currentTime > christmas) {
+			christmas = new Date(`December 25 ${currentYear + 1} 00:00:00`);
+		}
+
 		const timer = christmas - currentTime;
 		setDay(Math.floor(timer / 1000 / 60 / 60 / 24));
 		setHour(Math.floor(timer / 1000 / 60 / 60) % 24);
